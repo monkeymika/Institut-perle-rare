@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Prestations — Institut Perle Rare By Laura à Saint-Dizier</title>
+  <meta name="description" content="Découvrez toutes nos prestations esthétiques : soins visage, corps, mains et pieds, épilation, maquillage, soins amincissants. Institut Perle Rare à Saint-Dizier.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="logo-text">Perle Rare<span>Institut de Beauté by Laura</span></div>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <div class="nav__item"><a href="index.html" class="nav__link">Accueil</a></div>
+        <div class="nav__item"><a href="institut.html" class="nav__link">L'Institut</a></div>
+        <div class="nav__item">
+          <a href="prestations.html" class="nav__link active">Prestations ▾</a>
+          <div class="nav__dropdown">
+            <a href="soins-corps.html" class="nav__dropdown-link">Soins du Corps</a>
+            <a href="beaute-mains-pieds.html" class="nav__dropdown-link">Beauté Mains &amp; Pieds</a>
+            <a href="epilation.html" class="nav__dropdown-link">Épilation</a>
+            <a href="maquillage.html" class="nav__dropdown-link">Maquillage</a>
+            <a href="soins-amincissants.html" class="nav__dropdown-link">Soins Amincissants</a>
+          </div>
+        </div>
+        <div class="nav__item"><a href="contact.html" class="nav__link">Contact</a></div>
+      </nav>
+      <a href="contact.html#rdv" class="btn btn--outline nav__cta">Prendre RDV</a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <a href="index.html" class="mobile-menu__link">Accueil</a>
+    <a href="institut.html" class="mobile-menu__link">L'Institut</a>
+    <a href="prestations.html" class="mobile-menu__link mobile-sub-toggle">Prestations</a>
+    <div class="mobile-menu__sub" style="display:none">
+      <a href="soins-corps.html" class="mobile-menu__sub-link">Soins du Corps</a>
+      <a href="beaute-mains-pieds.html" class="mobile-menu__sub-link">Beauté Mains &amp; Pieds</a>
+      <a href="epilation.html" class="mobile-menu__sub-link">Épilation</a>
+      <a href="maquillage.html" class="mobile-menu__sub-link">Maquillage</a>
+      <a href="soins-amincissants.html" class="mobile-menu__sub-link">Soins Amincissants</a>
+    </div>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+  </nav>
+  <div class="mobile-menu__footer">
+    <a href="contact.html#rdv" class="btn btn--primary">Prendre Rendez-vous</a>
+    <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--text-muted)"><a href="tel:0325560271">03 25 56 02 71</a></p>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero__bg" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600&q=80&auto=format&fit=crop');"></div>
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content">
+      <span class="eyebrow">Beauté &amp; Bien-être</span>
+      <h1>Nos <em>Prestations</em></h1>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Accueil</a>
+      <span class="breadcrumb__sep">›</span>
+      <span>Nos Prestations</span>
+    </nav>
+    <div class="section-header" data-reveal>
+      <span class="eyebrow">L'art du soin</span>
+      <h2>Des soins pour<br><em>chaque envie</em></h2>
+      <p>De la détente absolue à la transformation beauté, découvrez l'ensemble de nos prestations esthétiques, pensées pour sublimer votre beauté naturelle.</p>
+    </div>
+
+    <div class="prestations-grid">
+
+      <article class="card" id="visage" data-reveal data-reveal-delay="1">
+        <div class="card__img">
+          <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80&auto=format&fit=crop" alt="Soins du visage" loading="lazy">
+        </div>
+        <div class="card__body">
+          <span class="eyebrow">Visage</span>
+          <h3>Soins du Visage</h3>
+          <p>Soins anti-âge, hydratants et personnalisés selon votre type de peau. Nous utilisons les meilleures marques : Valmont, Maria Galland, Cinq Mondes et Esthederm pour des résultats visibles et durables.</p>
+          <a href="contact.html#rdv" class="btn btn--outline-dark">Prendre RDV</a>
+        </div>
+      </article>
+
+      <article class="card" data-reveal data-reveal-delay="2">
+        <div class="card__img">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80&auto=format&fit=crop" alt="Soins du corps" loading="lazy">
+        </div>
+        <div class="card__body">
+          <span class="eyebrow">Corps</span>
+          <h3>Soins du Corps</h3>
+          <p>Exfoliations, massages relaxants et thérapeutiques, soins Cryo 21 et appareils LPG pour un corps revitalisé et mis en valeur.</p>
+          <a href="soins-corps.html" class="btn btn--outline-dark">Voir les soins</a>
+        </div>
+      </article>
+
+      <article class="card" data-reveal data-reveal-delay="3">
+        <div class="card__img">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80&auto=format&fit=crop" alt="Beauté mains et pieds" loading="lazy">
+        </div>
+        <div class="card__body">
+          <span class="eyebrow">Mains &amp; Pieds</span>
+          <h3>Beauté Mains &amp; Pieds</h3>
+          <p>Manucure classique, pose de vernis, bain de paraffine, soin sublimes, Calluspeeling et soin pieds complet. Des mains et des pieds parfaits en toute saison.</p>
+          <a href="beaute-mains-pieds.html" class="btn btn--outline-dark">Voir les soins</a>
+        </div>
+      </article>
+
+      <article class="card" data-reveal data-reveal-delay="4">
+        <div class="card__img">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&auto=format&fit=crop" alt="Épilation" loading="lazy">
+        </div>
+        <div class="card__body">
+          <span class="eyebrow">Épilation</span>
+          <h3>Épilation</h3>
+          <p>Épilation à la cire jetable pour toutes les zones du corps, et épilation longue durée pour une douceur qui dure. Forfaits disponibles.</p>
+          <a href="epilation.html" class="btn btn--outline-dark">Voir les soins</a>
+        </div>
+      </article>
+
+      <article class="card" data-reveal data-reveal-delay="5">
+        <div class="card__img">
+          <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80&auto=format&fit=crop" alt="Maquillage" loading="lazy">
+        </div>
+        <div class="card__body">
+          <span class="eyebrow">Maquillage</span>
+          <h3>Maquillage</h3>
+          <p>Maquillage classique pour toutes occasions (mariage, événement, shooting…) et maquillage longue durée Styliderm, une technique unique certifiée.</p>
+          <a href="maquillage.html" class="btn btn--outline-dark">Voir les soins</a>
+        </div>
+      </article>
+
+      <article class="card" data-reveal data-reveal-delay="6">
+        <div class="card__img">
+          <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&q=80&auto=format&fit=crop" alt="Soins amincissants" loading="lazy">
+        </div>
+        <div class="card__body">
+          <span class="eyebrow">Silhouette</span>
+          <h3>Soins Amincissants</h3>
+          <p>Cryo 21, LPG endermologie et soins amincissants ciblés. Des solutions efficaces pour affiner votre silhouette et retrouver confiance en vous.</p>
+          <a href="soins-amincissants.html" class="btn btn--outline-dark">Voir les soins</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- BRONZAGE -->
+<section class="section--alt" id="bronzage">
+  <div class="container">
+    <div class="split" data-reveal>
+      <div class="split__content">
+        <span class="eyebrow">Exclusivité</span>
+        <h2>Bronzage<br><em>Sun Institute</em></h2>
+        <p>Profitez d'un bronzage sublime et naturel sans exposition aux UV nocifs. La technique Sun Institute par micro-nébulisation offre une couleur uniforme, progressive et parfaitement naturelle.</p>
+        <ul style="margin: 1.25rem 0 2rem; display:flex; flex-direction:column; gap:0.5rem;">
+          <li style="font-size:0.92rem; color:var(--text-muted); display:flex; align-items:center; gap:0.5rem;">
+            <span style="color:var(--primary)">✓</span> 94,5% d'ingrédients naturels et d'origine végétale
+          </li>
+          <li style="font-size:0.92rem; color:var(--text-muted); display:flex; align-items:center; gap:0.5rem;">
+            <span style="color:var(--primary)">✓</span> Sans risque UV, sans photovieillissement
+          </li>
+          <li style="font-size:0.92rem; color:var(--text-muted); display:flex; align-items:center; gap:0.5rem;">
+            <span style="color:var(--primary)">✓</span> Résultat immédiat et uniforme
+          </li>
+        </ul>
+        <a href="contact.html#rdv" class="btn btn--outline-dark">Réserver une séance</a>
+      </div>
+      <div class="split__visual">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80&auto=format&fit=crop"
+          alt="Bronzage Sun Institute"
+          class="split__img"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gift-section">
+  <div class="container">
+    <div data-reveal>
+      <span class="eyebrow" style="color:rgba(255,255,255,0.6)">Un cadeau précieux</span>
+      <h2>Carte Cadeau</h2>
+      <p>Offrez un moment de beauté et de bien-être à ceux que vous aimez. Carte cadeau personnalisable selon vos envies et votre budget, envoi à distance possible.</p>
+      <a href="contact.html" class="btn btn--outline">Nous contacter</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div data-reveal>
+      <span class="eyebrow" style="color:var(--primary-light)">Besoin d'un conseil ?</span>
+      <h2>Laura vous accompagne<br><em style="font-style:italic; color:#E8C9B0">personnellement</em></h2>
+      <p>Chaque soin est adapté à vos besoins spécifiques. Contactez-nous pour qu'on vous guide vers la prestation idéale.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap">
+        <a href="contact.html#rdv" class="btn btn--primary">Prendre Rendez-vous</a>
+        <a href="tel:0325560271" class="btn btn--outline">03 25 56 02 71</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="logo-text">Perle Rare<span>Institut de Beauté by Laura</span></div>
+        <p>Un espace de beauté et de bien-être dédié à votre épanouissement, dans une ambiance cosy et chaleureuse à Saint-Dizier.</p>
+        <div class="footer__social">
+          <a href="#" class="social-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <span class="footer__title">Navigation</span>
+        <div class="footer__links">
+          <a href="index.html" class="footer__link">Accueil</a>
+          <a href="institut.html" class="footer__link">L'Institut</a>
+          <a href="prestations.html" class="footer__link">Nos Prestations</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer__title">Prestations</span>
+        <div class="footer__links">
+          <a href="soins-corps.html" class="footer__link">Soins du Corps</a>
+          <a href="beaute-mains-pieds.html" class="footer__link">Mains &amp; Pieds</a>
+          <a href="epilation.html" class="footer__link">Épilation</a>
+          <a href="maquillage.html" class="footer__link">Maquillage</a>
+          <a href="soins-amincissants.html" class="footer__link">Soins Amincissants</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer__title">Contact &amp; Horaires</span>
+        <p class="footer__contact-item">3 Rue de la Victoire<br>52100 Saint-Dizier</p>
+        <p class="footer__contact-item"><a href="tel:0325560271">03 25 56 02 71</a></p>
+        <p class="footer__contact-item"><a href="mailto:contact@perle-rare.net">contact@perle-rare.net</a></p>
+        <p class="footer__contact-item" style="margin-top:1rem; font-size:0.82rem; line-height:1.9;">Lun · 14h–19h<br>Mar–Sam · 9h–19h<br><span style="opacity:0.5">Dimanche · Fermé</span></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2024 Institut Perle Rare by Laura — Tous droits réservés</p>
+      <div class="footer__legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="#">Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

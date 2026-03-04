@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.perle-rare.net)",
+      "WebFetch(domain:goldustspa.com)",
+      "WebSearch",
+      "WebFetch(domain:www.initiative-hautemarne.fr)"
+    ]
+  }
+}
