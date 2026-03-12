@@ -589,6 +589,121 @@ section {
   text-align: center;
 }
 
+.mobile-menu__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.mobile-menu__contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.mobile-menu__contact-link:hover {
+  color: var(--primary);
+}
+
+.mobile-menu__contact-link svg {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.mobile-menu__social {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* ===== TOPBAR ===== */
+.header__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  max-height: 2.5rem;
+  opacity: 1;
+  transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.35s ease, padding 0.35s ease;
+}
+
+.header--scrolled .header__topbar {
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom-color: transparent;
+}
+
+.header__topbar-contacts {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header__topbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition);
+}
+
+.header__topbar-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.header--scrolled .header__topbar-link {
+  color: var(--text-muted);
+}
+
+.header--scrolled .header__topbar-link:hover {
+  color: var(--primary);
+}
+
+.header__topbar-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header__topbar-social-link {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition);
+}
+
+.header__topbar-social-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.header--scrolled .header__topbar-social-link {
+  color: var(--text-muted);
+}
+
+.header--scrolled .header__topbar-social-link:hover {
+  color: var(--primary);
+}
+
+/* Masquer la topbar sur tablette/mobile (géré par le menu mobile) */
+@media (max-width: 900px) {
+  .header__topbar {
+    display: none;
+  }
+}
+
 /* ===== HERO ===== */
 .hero {
   position: relative;
