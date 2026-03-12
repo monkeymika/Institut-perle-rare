@@ -6,12 +6,66 @@
   <title>Institut Perle Rare By Laura — Soins esthétiques à Saint-Dizier</title>
   <meta name="description" content="Institut de beauté à Saint-Dizier. Soins du visage, soins corps, épilation, maquillage, beauté mains et pieds. Prenez soin de vous avec Laura.">
   <link rel="canonical" href="https://www.perle-rare.net/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta name="robots" content="index, follow">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Institut Perle Rare By Laura">
+  <meta property="og:image" content="https://www.perle-rare.net/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Institut Perle Rare By Laura — Soins esthétiques à Saint-Dizier">
+  <meta name="twitter:description" content="Institut de beauté à Saint-Dizier — soins esthétiques haut de gamme dans une ambiance cosy et chaleureuse.">
   <link rel="stylesheet" href="css/style.css">
   <!-- Open Graph -->
   <meta property="og:title" content="Institut Perle Rare By Laura">
   <meta property="og:description" content="Institut de beauté à Saint-Dizier — soins esthétiques haut de gamme dans une ambiance cosy et chaleureuse.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.perle-rare.net/">
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Institut Perle Rare By Laura",
+    "description": "Institut de beauté à Saint-Dizier proposant soins du visage, soins corps, épilation, maquillage, beauté mains et pieds.",
+    "url": "https://www.perle-rare.net",
+    "telephone": "+33325560271",
+    "email": "contact@perle-rare.net",
+    "image": "https://www.perle-rare.net/images/og-image.jpg",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3 Rue de la Victoire",
+      "addressLocality": "Saint-Dizier",
+      "postalCode": "52100",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.6383,
+      "longitude": 4.9488
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Monday",
+        "opens": "14:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/perle-rare",
+      "https://www.instagram.com/perle-rare"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -330,9 +384,26 @@
     <div class="split split--reverse" data-reveal>
       <div class="split__content">
         <span class="eyebrow">Offrir un moment de douceur</span>
-        <h2>Carte Cadeau</h2>
-        <p>Faites plaisir à vos proches avec une carte cadeau personnalisée selon vos envies et votre budget.</p>
+        <h2>Quelques idées cadeaux à offrir</h2>
         <p>L'envoi à distance est possible, paiement par carte bancaire.</p>
+
+        <div class="gift-offers">
+          <div class="gift-offer">
+            <div class="gift-offer__header">
+              <span class="gift-offer__name">Bouquet nuptial <em>• 2h30 + 30 min le jour J</em></span>
+              <span class="gift-offer__price">189&nbsp;€</span>
+            </div>
+            <p class="gift-offer__detail">Soin spécifique du visage • Modelage instant serein • Forfait épilation • Maquillage mariée avec essai</p>
+          </div>
+          <div class="gift-offer">
+            <div class="gift-offer__header">
+              <span class="gift-offer__name">Douce matinée <em>• prévoir 2h</em></span>
+              <span class="gift-offer__price">149&nbsp;€</span>
+            </div>
+            <p class="gift-offer__detail">Modelage corps Perle Rare • Soin du visage • Manucure</p>
+          </div>
+        </div>
+
         <a href="contact.html" class="btn btn--primary">Nous contacter</a>
       </div>
       <div class="split__visual">
@@ -349,19 +420,21 @@
 </section>
 
 <!-- ===== CTA CONTACT ===== -->
-<section class="cta-section">
-  <div class="container">
-    <div data-reveal>
-      <span class="eyebrow" style="color:var(--primary-light)">Votre bien-être nous tient à cœur</span>
-      <h2>Prêt·e pour<br><em style="font-style:italic; color:#E8C9B0">vous faire chouchouter ?</em></h2>
-      <p>Contactez-nous pour prendre rendez-vous ou pour toute question. Laura sera ravie de vous accueillir.</p>
-      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap">
-        <a href="contact.html#rdv" class="btn btn--primary">Prendre Rendez-vous</a>
-        <a href="tel:0325560271" class="btn btn--outline">03 25 56 02 71</a>
+<div class="cta-pin-wrapper">
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="eyebrow" style="color:var(--primary-light)">Votre bien-être nous tient à cœur</span>
+        <h2>Prêt·e pour<br><em style="font-style:italic; color:#E8C9B0">vous faire chouchouter ?</em></h2>
+        <p>Contactez-nous pour prendre rendez-vous ou pour toute question. Laura sera ravie de vous accueillir.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap">
+          <a href="contact.html#rdv" class="btn btn--primary">Prendre Rendez-vous</a>
+          <a href="tel:0325560271" class="btn btn--outline">03 25 56 02 71</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">

@@ -272,6 +272,41 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(tick);
   })();
 
+  // ===== CTA PINNED REVEAL =====
+  (function initCtaReveal() {
+    const wrapper = document.querySelector('.cta-pin-wrapper');
+    const section = document.querySelector('.cta-section');
+    const inner   = document.querySelector('.cta-inner');
+    if (!wrapper || !section || !inner) return;
+
+    let rafId = null;
+    function tick() {
+      const rect     = wrapper.getBoundingClientRect();
+      const scrolled = -rect.top;                          // px défilés dans le wrapper
+      const total    = wrapper.offsetHeight - window.innerHeight;
+      const progress = Math.max(0, Math.min(1, scrolled / total));
+
+      // clip-path : circle(0%) → circle(150%) sur tout le scroll
+      const radius = 150 * easeOutCubic(progress);
+      section.style.clipPath = `circle(${radius.toFixed(2)}% at 50% 50%)`;
+
+      // Contenu : fade-in après 60% de progression
+      const contentP = Math.max(0, Math.min(1, (progress - 0.6) / 0.25));
+      inner.style.opacity   = contentP;
+      inner.style.transform = `scale(${0.96 + 0.04 * contentP})`;
+
+      rafId = null;
+    }
+
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+    window.addEventListener('scroll', () => {
+      if (!rafId) rafId = requestAnimationFrame(tick);
+    }, { passive: true });
+
+    requestAnimationFrame(tick);
+  })();
+
   // ===== SMOOTH SCROLL pour ancres =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {

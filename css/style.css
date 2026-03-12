@@ -4,7 +4,7 @@
    Inspiration : Goldust Spa
    ============================================ */
 
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap");
+/* Google Fonts chargées via <link> dans le HTML pour de meilleures performances */
 
 /* ===== VARIABLES ===== */
 :root {
@@ -1084,14 +1084,29 @@ section {
 }
 
 /* ===== CTA SECTIONS ===== */
-/* Transition par défaut : depuis section blanche */
+.cta-pin-wrapper {
+  height: 550vh;
+  position: relative;
+}
+
 .cta-section {
-  background-image: linear-gradient(to bottom, var(--bg) 0%, transparent 18%);
   background-color: var(--bg-dark);
   color: var(--white);
   text-align: center;
-  padding: clamp(5rem, 11vw, 9.5rem) 0;
-  position: relative;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(0% at 50% 50%);
+  will-change: clip-path;
+}
+
+.cta-inner {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+  transform: scale(0.96);
 }
 
 /* Warm ambient glow — bottom center */
@@ -1146,17 +1161,62 @@ section {
   line-height: 2;
 }
 
-/* Transition depuis gift-section (fond crème alt) */
-.gift-section + .cta-section {
-  background-image: linear-gradient(to bottom, var(--bg-alt) 0%, transparent 18%);
-}
-
-/* Transition depuis section crème alt */
-.section--alt + .cta-section {
-  background-image: linear-gradient(to bottom, var(--bg-alt) 0%, transparent 18%);
-}
 
 /* Transition depuis gift-section (maintenant section--alt) vers cta */
+
+/* ===== GIFT OFFERS ===== */
+.gift-offers {
+  margin: 1.75rem 0 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.gift-offer {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.gift-offer:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.gift-offer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.gift-offer__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.gift-offer__name em {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.gift-offer__price {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.gift-offer__detail {
+  font-size: 0.875rem;
+  color: var(--primary);
+  line-height: 1.6;
+  margin: 0;
+}
 
 /* ===== CONTACT ===== */
 .contact-grid {

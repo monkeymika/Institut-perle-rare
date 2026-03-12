@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable — Institut Perle Rare By Laura</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .notfound {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: var(--bg);
+      padding: 2rem;
+    }
+    .notfound__code {
+      font-family: var(--font-display);
+      font-size: clamp(7rem, 20vw, 14rem);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--primary);
+      opacity: 0.25;
+      display: block;
+      margin-bottom: -1rem;
+    }
+    .notfound__title {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .notfound__text {
+      color: var(--text-muted);
+      max-width: 420px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+    .notfound__links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<div class="notfound">
+  <div>
+    <span class="notfound__code">404</span>
+    <h1 class="notfound__title">Page <em>introuvable</em></h1>
+    <p class="notfound__text">Cette page n'existe pas ou a été déplacée. Pas d'inquiétude, vous pouvez retrouver toutes nos prestations depuis l'accueil.</p>
+    <div class="notfound__links">
+      <a href="index.html" class="btn btn--primary">Retour à l'accueil</a>
+      <a href="contact.html" class="btn btn--outline">Nous contacter</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
