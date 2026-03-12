@@ -37,11 +37,11 @@
         <div class="nav__item">
           <a href="prestations.html" class="nav__link">Prestations ▾</a>
           <div class="nav__dropdown">
-            <a href="soins-corps.html" class="nav__dropdown-link">Soins du Corps</a>
+            <a href="soins-visage.html" class="nav__dropdown-link">Soins du Visage</a><a href="soins-corps.html" class="nav__dropdown-link">Soins du Corps</a>
             <a href="beaute-mains-pieds.html" class="nav__dropdown-link">Beauté Mains &amp; Pieds</a>
             <a href="epilation.html" class="nav__dropdown-link">Épilation</a>
             <a href="maquillage.html" class="nav__dropdown-link">Maquillage</a>
-            <a href="soins-amincissants.html" class="nav__dropdown-link">Soins Amincissants</a>
+            <a href="soins-amincissants.html" class="nav__dropdown-link">Soins Amincissants</a><a href="bronzage.html" class="nav__dropdown-link">Bronzage</a>
           </div>
         </div>
         <div class="nav__item">
@@ -68,11 +68,11 @@
     <a href="institut.html" class="mobile-menu__link">L'Institut</a>
     <a href="prestations.html" class="mobile-menu__link mobile-sub-toggle">Prestations</a>
     <div class="mobile-menu__sub" style="display:none">
-      <a href="soins-corps.html" class="mobile-menu__sub-link">Soins du Corps</a>
+      <a href="soins-visage.html" class="mobile-menu__sub-link">Soins du Visage</a><a href="soins-corps.html" class="mobile-menu__sub-link">Soins du Corps</a>
       <a href="beaute-mains-pieds.html" class="mobile-menu__sub-link">Beauté Mains &amp; Pieds</a>
       <a href="epilation.html" class="mobile-menu__sub-link">Épilation</a>
       <a href="maquillage.html" class="mobile-menu__sub-link">Maquillage</a>
-      <a href="soins-amincissants.html" class="mobile-menu__sub-link">Soins Amincissants</a>
+      <a href="soins-amincissants.html" class="mobile-menu__sub-link">Soins Amincissants</a><a href="bronzage.html" class="mobile-menu__sub-link">Bronzage</a>
     </div>
     <a href="contact.html" class="mobile-menu__link">Contact</a>
   </nav>
@@ -147,7 +147,7 @@
         <span class="stat__label">Avis clients</span>
       </div>
       <div data-reveal data-reveal-delay="4">
-        <span class="stat__number">6</span>
+        <span class="stat__number">7</span>
         <span class="stat__label">Types de soins</span>
       </div>
     </div>
@@ -231,6 +231,17 @@
         </div>
       </article>
 
+      <article class="card" data-reveal data-reveal-delay="7">
+        <div class="card__img">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80&auto=format&fit=crop" alt="Bronzage sans UV" loading="lazy">
+        </div>
+        <div class="card__body">
+          <h3>Bronzage</h3>
+          <p>Brumisation Sun Institute sans UV (94,5 % naturel) ou cabine Turbo.UV 3 haute performance. Un hâle doré toute l'année.</p>
+          <a href="bronzage.html" class="btn btn--outline-dark">Découvrir</a>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -251,6 +262,41 @@
       <span class="brand-item">LPG</span>
       <span class="brand-item">Sun Institute</span>
       <span class="brand-item">OPI</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDÉOS ===== -->
+<section>
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="eyebrow">Découvrez l'Institut</span>
+      <h2>Perle Rare<br><em>en vidéo</em></h2>
+      <p>Plongez dans l'univers de l'Institut Perle Rare et découvrez nos soins en images.</p>
+    </div>
+    <div class="videos-grid">
+      <div class="video-card" data-reveal data-reveal-delay="1">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/ZAUsvZUJaFw"
+            title="Institut Perle Rare By Laura — Vidéo 1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="video-card" data-reveal data-reveal-delay="2">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/5IgYwVZkj1w"
+            title="Institut Perle Rare By Laura — Vidéo 2"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -279,13 +325,25 @@
 </section>
 
 <!-- ===== CARTE CADEAU ===== -->
-<section class="gift-section">
+<section class="gift-section section--alt">
   <div class="container">
-    <div data-reveal>
-      <span class="eyebrow" style="color:rgba(255,255,255,0.6)">Offrir un moment de douceur</span>
-      <h2>Carte Cadeau</h2>
-      <p>Composez une carte cadeau personnalisée selon vos envies et votre budget. L'envoi à distance est possible, paiement par carte bancaire.</p>
-      <a href="contact.html" class="btn btn--outline">Nous contacter</a>
+    <div class="split split--reverse" data-reveal>
+      <div class="split__content">
+        <span class="eyebrow">Offrir un moment de douceur</span>
+        <h2>Carte Cadeau</h2>
+        <p>Faites plaisir à vos proches avec une carte cadeau personnalisée selon vos envies et votre budget.</p>
+        <p>L'envoi à distance est possible, paiement par carte bancaire.</p>
+        <a href="contact.html" class="btn btn--primary">Nous contacter</a>
+      </div>
+      <div class="split__visual">
+        <img
+          src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&q=80"
+          alt="Carte cadeau Institut Perle Rare"
+          class="split__img"
+          loading="lazy"
+        >
+        <div class="split__accent"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -339,11 +397,11 @@
       <div>
         <span class="footer__title">Prestations</span>
         <div class="footer__links">
-          <a href="soins-corps.html" class="footer__link">Soins du Corps</a>
+          <a href="soins-visage.html" class="footer__link">Soins du Visage</a><a href="soins-corps.html" class="footer__link">Soins du Corps</a>
           <a href="beaute-mains-pieds.html" class="footer__link">Mains &amp; Pieds</a>
           <a href="epilation.html" class="footer__link">Épilation</a>
           <a href="maquillage.html" class="footer__link">Maquillage</a>
-          <a href="soins-amincissants.html" class="footer__link">Soins Amincissants</a>
+          <a href="soins-amincissants.html" class="footer__link">Soins Amincissants</a><a href="bronzage.html" class="footer__link">Bronzage</a>
         </div>
       </div>
 
