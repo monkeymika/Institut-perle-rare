@@ -170,19 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = 'Envoi en cours…';
       btn.disabled = true;
 
-      // Vérification hCaptcha
-      const hCaptcha = contactForm.querySelector('textarea[name=h-captcha-response]');
-      if (hCaptcha && !hCaptcha.value) {
-        btn.textContent = originalText;
-        btn.disabled = false;
-        alert('Veuillez cocher le captcha.');
-        return;
-      }
-
       const data = new FormData(contactForm);
 
       try {
-        const res = await fetch('https://api.web3forms.com/submit', {
+        const res = await fetch('send.php', {
           method: 'POST',
           body: data
         });

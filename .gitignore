@@ -1,2 +1,5 @@
 # Clé API locale — ne jamais committer
 js/config.js
+
+# Backend mail — ne jamais committer
+send.php
