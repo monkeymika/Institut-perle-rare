@@ -1164,13 +1164,8 @@ section {
   max-width: 200px;
   object-fit: contain;
   border-radius: 10px;
-  filter: grayscale(100%) opacity(0.55);
-  transition: filter 0.4s ease;
 }
 
-.brand-logo img:hover {
-  filter: grayscale(0%) opacity(1);
-}
 
 @keyframes brandScroll {
   0%   { transform: translateX(0); }
