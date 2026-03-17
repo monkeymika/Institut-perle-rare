@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = new FormData(contactForm);
 
       try {
-        const res = await fetch('send.php', {
+        const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: data
         });
