@@ -4,7 +4,8 @@
    Inspiration : Goldust Spa
    ============================================ */
 
-/* Google Fonts chargées via <link> dans le HTML pour de meilleures performances */
+/* Fonts auto-hébergées */
+@import url('fonts.css');
 
 /* ===== VARIABLES ===== */
 :root {
