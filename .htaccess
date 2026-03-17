@@ -6,6 +6,10 @@ RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Supprimer l'extension .html des URLs
+# 0. Rediriger /index et /index.html → / (page d'accueil)
+RewriteCond %{THE_REQUEST} \s/+index(\.html)?[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
 # 1. Rediriger /page.html → /page (301 permanent)
 RewriteCond %{THE_REQUEST} \s/+([^.]+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L,NE]
