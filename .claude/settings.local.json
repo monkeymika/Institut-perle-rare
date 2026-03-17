@@ -4,7 +4,14 @@
       "WebFetch(domain:www.perle-rare.net)",
       "WebFetch(domain:goldustspa.com)",
       "WebSearch",
-      "WebFetch(domain:www.initiative-hautemarne.fr)"
+      "WebFetch(domain:www.initiative-hautemarne.fr)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python -m pip install Pillow -q)",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "WebFetch(domain:www.pexels.com)",
+      "WebFetch(domain:pixabay.com)"
     ]
   }
 }
