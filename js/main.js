@@ -170,6 +170,15 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = 'Envoi en cours…';
       btn.disabled = true;
 
+      // Vérification hCaptcha
+      const hCaptcha = contactForm.querySelector('textarea[name=h-captcha-response]');
+      if (hCaptcha && !hCaptcha.value) {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        alert('Veuillez cocher le captcha.');
+        return;
+      }
+
       const data = new FormData(contactForm);
       data.append('access_key', window.WEB3FORMS_KEY || '');
       data.append('subject', 'Nouveau message — Institut Perle Rare');
