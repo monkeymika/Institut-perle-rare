@@ -19,6 +19,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Soins du Corps — Institut Perle Rare By Laura">
   <meta name="twitter:description" content="Soins du corps, exfoliations, massages, Cryo 21 et LPG à l'Institut Perle Rare by Laura à Saint-Dizier.">
+  <!-- Performance : preload fonts critiques -->
+  <link rel="preload" as="font" type="font/woff2" href="fonts/jost-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/cg-italic-latin.woff2" crossorigin>
+  <!-- Preconnect CDN image externe -->
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -141,7 +146,7 @@
         <a href="contact.html#rdv" class="btn btn--primary">Prendre Rendez-vous</a>
       </div>
       <div class="split__visual">
-        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80&auto=format&fit=crop" alt="Soin du corps" class="split__img" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80&auto=format&fit=crop" alt="Soin du corps" class="split__img" fetchpriority="high">
         <div class="split__accent"></div>
       </div>
     </div>

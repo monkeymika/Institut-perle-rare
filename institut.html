@@ -23,6 +23,11 @@
   <meta name="twitter:title" content="L'Institut Perle Rare By Laura — Saint-Dizier">
   <meta name="twitter:description"
     content="Découvrez l'Institut Perle Rare by Laura à Saint-Dizier. Esthéticienne diplômée, 10 ans d'expérience, soins personnalisés dans une ambiance chaleureuse.">
+  <!-- Performance : preload fonts critiques -->
+  <link rel="preload" as="font" type="font/woff2" href="fonts/jost-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/cg-italic-latin.woff2" crossorigin>
+  <!-- Preconnect CDN image externe -->
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -190,7 +195,7 @@
         </div>
         <div class="split__visual">
           <img src="./images/optimisees/magasin.webp" alt="Laura Lamorlette, esthéticienne à l'Institut Perle Rare"
-            class="split__img" loading="lazy">
+            class="split__img" fetchpriority="high">
           <!-- REMPLACEMENT : mettez la photo de Laura ici -->
           <div class="split__accent"></div>
         </div>

@@ -278,13 +278,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Cache des hauteurs de sections — recalculé uniquement au resize
+    const sectionHeights = new Map();
+    function cacheSectionHeights() {
+      document.querySelectorAll('section:not(.page-hero)').forEach(s => {
+        sectionHeights.set(s, s.offsetHeight);
+      });
+    }
+    cacheSectionHeights();
+    window.addEventListener('resize', cacheSectionHeights, { passive: true });
+
     // Tick : recalcule la position viewport de chaque perle + parallaxe
+    // On skip les sections hors viewport étendu (±200% vh) pour économiser des reflows
     let rafId = null;
     function tick() {
+      const vh = window.innerHeight;
+      const margin = vh * 2;
       wrappers.forEach(wrap => {
         const section = wrap._section;
         const rect = section.getBoundingClientRect();
-        const vh = window.innerHeight;
+        // Skip si la section est bien au-delà du viewport
+        if (rect.bottom < -margin || rect.top > vh + margin) return;
         const progress = 1 - (rect.top + rect.height) / (vh + rect.height);
         const parallaxOffset = progress * rect.height * wrap._spd;
         const top = rect.top + (wrap._t / 100) * rect.height - parallaxOffset;
