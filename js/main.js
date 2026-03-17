@@ -180,9 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const data = new FormData(contactForm);
-      data.append('access_key', window.WEB3FORMS_KEY || '');
-      data.append('subject', 'Nouveau message — Institut Perle Rare');
-      data.append('from_name', 'Site Perle Rare');
 
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
