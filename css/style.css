@@ -1204,6 +1204,7 @@ section {
   color: var(--white);
   text-align: center;
   padding: var(--space-3xl) 0;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
