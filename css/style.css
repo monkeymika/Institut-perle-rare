@@ -1144,7 +1144,7 @@ section {
   align-items: center;
   gap: 5rem;
   width: max-content;
-  animation: brandScroll 22s linear infinite;
+  animation: brandScroll 12s linear infinite;
 }
 
 .brands-track:hover {
@@ -1163,6 +1163,7 @@ section {
   width: auto;
   max-width: 140px;
   object-fit: contain;
+  border-radius: 10px;
   filter: grayscale(100%) opacity(0.55);
   transition: filter 0.4s ease;
 }
