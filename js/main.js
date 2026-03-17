@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ===== FORMULAIRE CONTACT =====
+  // ===== FORMULAIRE CONTACT (Web3Forms) =====
   const contactForm = document.querySelector('.contact-form');
 
   if (contactForm) {
@@ -170,20 +170,51 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = 'Envoi en cours…';
       btn.disabled = true;
 
-      // Simulation d'envoi (à remplacer par un vrai backend ou Formspree)
-      await new Promise(resolve => setTimeout(resolve, 1200));
+      const data = new FormData(contactForm);
+      data.append('access_key', window.WEB3FORMS_KEY || '');
+      data.append('subject', 'Nouveau message — Institut Perle Rare');
+      data.append('from_name', 'Site Perle Rare');
 
-      btn.textContent = 'Message envoyé ✓';
-      btn.style.background = '#5a8a6a';
-      btn.style.borderColor = '#5a8a6a';
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: data
+        });
+        const json = await res.json();
 
-      setTimeout(() => {
-        contactForm.reset();
-        btn.textContent = originalText;
-        btn.disabled = false;
-        btn.style.background = '';
-        btn.style.borderColor = '';
-      }, 4000);
+        if (json.success) {
+          btn.textContent = 'Message envoyé ✓';
+          btn.style.background = '#5a8a6a';
+          btn.style.borderColor = '#5a8a6a';
+          setTimeout(() => {
+            contactForm.reset();
+            btn.textContent = originalText;
+            btn.disabled = false;
+            btn.style.background = '';
+            btn.style.borderColor = '';
+          }, 4000);
+        } else {
+          btn.textContent = 'Erreur, veuillez réessayer';
+          btn.style.background = '#c0392b';
+          btn.style.borderColor = '#c0392b';
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            btn.style.background = '';
+            btn.style.borderColor = '';
+          }, 4000);
+        }
+      } catch {
+        btn.textContent = 'Erreur réseau, veuillez réessayer';
+        btn.style.background = '#c0392b';
+        btn.style.borderColor = '#c0392b';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          btn.style.background = '';
+          btn.style.borderColor = '';
+        }, 4000);
+      }
     });
   }
 

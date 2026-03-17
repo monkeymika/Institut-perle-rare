@@ -237,6 +237,8 @@
           <p class="subtitle">Rendez-vous, questions, demande de devis… nous vous répondrons dans les plus brefs délais.</p>
 
           <form class="contact-form" novalidate>
+            <!-- Honeypot anti-spam (invisible pour les humains) -->
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
             <div class="form-grid">
               <div class="form-group">
                 <label for="prenom">Prénom *</label>
@@ -345,6 +347,7 @@
   </div>
 </footer>
 
+<script src="js/config.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
