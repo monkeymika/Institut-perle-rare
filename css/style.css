@@ -1153,15 +1153,15 @@ section {
 
 .brand-logo {
   flex-shrink: 0;
-  height: 52px;
+  height: 80px;
   display: flex;
   align-items: center;
 }
 
 .brand-logo img {
-  height: 52px;
+  height: 80px;
   width: auto;
-  max-width: 140px;
+  max-width: 200px;
   object-fit: contain;
   border-radius: 10px;
   filter: grayscale(100%) opacity(0.55);
