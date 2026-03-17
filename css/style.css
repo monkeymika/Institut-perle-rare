@@ -5,7 +5,7 @@
    ============================================ */
 
 /* Fonts auto-hébergées */
-@import url('fonts.css');
+@import url("fonts.css");
 
 /* ===== VARIABLES ===== */
 :root {
@@ -158,7 +158,7 @@ section {
 /* Fondu doux entre sections blanches et sections crème */
 .section--alt::before,
 .section--alt::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -200,7 +200,7 @@ section {
 }
 
 .section-header h2::after {
-  content: '';
+  content: "";
   display: block;
   width: 2.5rem;
   height: 1px;
@@ -240,13 +240,18 @@ section {
 }
 
 .btn--primary::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 60%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.22),
+    transparent
+  );
   transform: skewX(-20deg);
   transition: left 0.55s ease;
 }
@@ -634,7 +639,11 @@ section {
   overflow: hidden;
   max-height: 2.5rem;
   opacity: 1;
-  transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.35s ease, padding 0.35s ease;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    margin 0.35s ease,
+    padding 0.35s ease;
 }
 
 .header--scrolled .header__topbar {
@@ -923,7 +932,7 @@ section {
 
 .split__img {
   width: 100%;
-  aspect-ratio: 4/5;
+  /* aspect-ratio: 4/5; */
   object-fit: cover;
   border-radius: var(--radius-lg);
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -969,7 +978,9 @@ section {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border);
-  box-shadow: 0 2px 16px rgba(40, 33, 30, 0.07), 0 1px 3px rgba(40, 33, 30, 0.05);
+  box-shadow:
+    0 2px 16px rgba(40, 33, 30, 0.07),
+    0 1px 3px rgba(40, 33, 30, 0.05);
   transition: all var(--transition);
   display: flex;
   flex-direction: column;
@@ -991,10 +1002,14 @@ section {
 }
 
 .card__img::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(28, 24, 20, 0.22) 0%, transparent 45%);
+  background: linear-gradient(
+    to top,
+    rgba(28, 24, 20, 0.22) 0%,
+    transparent 45%
+  );
   pointer-events: none;
   z-index: 1;
 }
@@ -1116,29 +1131,49 @@ section {
   color: var(--text-muted);
 }
 
-/* ===== MARQUES ===== */
-.brands-row {
+/* ===== MARQUES CAROUSEL ===== */
+.brands-carousel {
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+.brands-track {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem 2.5rem;
+  gap: 5rem;
+  width: max-content;
+  animation: brandScroll 22s linear infinite;
 }
 
-.brand-item {
-  font-family: var(--ff-display);
-  font-size: 1.15rem;
-  font-weight: 300;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-style: italic;
-  color: var(--text-light);
-  transition: color var(--transition);
-  padding: 0.5rem;
+.brands-track:hover {
+  animation-play-state: paused;
 }
 
-.brand-item:hover {
-  color: var(--primary);
+.brand-logo {
+  flex-shrink: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo img {
+  height: 52px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.55);
+  transition: filter 0.4s ease;
+}
+
+.brand-logo img:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+@keyframes brandScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ===== VALUES ===== */
@@ -1160,10 +1195,14 @@ section {
 }
 
 .value-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, transparent 40%, rgba(192,154,126,0.06) 100%);
+  background: linear-gradient(
+    135deg,
+    transparent 40%,
+    rgba(192, 154, 126, 0.06) 100%
+  );
   opacity: 0;
   transition: opacity var(--transition);
 }
@@ -1218,14 +1257,18 @@ section {
 
 /* Warm ambient glow — bottom center */
 .cta-section::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -15%;
   left: 50%;
   transform: translateX(-50%);
   width: 65%;
   height: 65%;
-  background: radial-gradient(ellipse, rgba(192, 154, 126, 0.14) 0%, transparent 65%);
+  background: radial-gradient(
+    ellipse,
+    rgba(192, 154, 126, 0.14) 0%,
+    transparent 65%
+  );
   pointer-events: none;
   z-index: 0;
 }
@@ -1246,11 +1289,15 @@ section {
 }
 
 .cta-section .eyebrow::before {
-  content: '';
+  content: "";
   display: block;
   width: 1px;
   height: 3rem;
-  background: linear-gradient(to bottom, transparent, rgba(192, 154, 126, 0.45));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(192, 154, 126, 0.45)
+  );
   margin: 0 auto 1.5rem;
 }
 
@@ -1267,7 +1314,6 @@ section {
   font-size: 0.95rem;
   line-height: 2;
 }
-
 
 /* Transition depuis gift-section (maintenant section--alt) vers cta */
 
@@ -1780,8 +1826,8 @@ textarea {
     gap: 1.5rem;
   }
 
-  .brands-row {
-    gap: 0.75rem 1.75rem;
+  .brands-track {
+    gap: 3rem;
   }
 }
 
@@ -1983,21 +2029,38 @@ textarea {
 
 /* CTA ornament gentle sway */
 @keyframes ctaOrnamentSway {
-  0%, 100% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-  25%       { transform: translate(-50%, -50%) rotate(3deg) scale(1.04); }
-  75%       { transform: translate(-50%, -50%) rotate(-2deg) scale(0.97); }
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(3deg) scale(1.04);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(-2deg) scale(0.97);
+  }
 }
 
 /* Page hero subtle zoom-in on load */
 @keyframes heroZoom {
-  0%   { transform: scale(1.06); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Section header line expand */
 @keyframes lineExpand {
-  0%   { width: 0; opacity: 0; }
-  100% { width: 2.5rem; opacity: 1; }
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 2.5rem;
+    opacity: 1;
+  }
 }
 
 /* ===== FLOATING PEARLS — DÉCORATION DE PAGE ===== */
@@ -2022,25 +2085,34 @@ section > .container {
   background: radial-gradient(
     circle at 30% 26%,
     rgba(255, 255, 255, 0.95) 0%,
-    rgba(240, 222, 208, 0.90) 18%,
-    rgba(210, 182, 160, 0.80) 42%,
-    rgba(175, 140, 115, 0.60) 68%,
+    rgba(240, 222, 208, 0.9) 18%,
+    rgba(210, 182, 160, 0.8) 42%,
+    rgba(175, 140, 115, 0.6) 68%,
     rgba(140, 108, 84, 0.25) 100%
   );
   box-shadow:
     inset -2px -2px 5px rgba(0, 0, 0, 0.14),
     inset 2px 3px 7px rgba(255, 255, 255, 0.75),
     0 4px 14px rgba(140, 108, 84, 0.18),
-    0 0 0 1px rgba(192, 154, 126, 0.20);
+    0 0 0 1px rgba(192, 154, 126, 0.2);
   animation: pearlDrift var(--dur, 12s) var(--delay, 0s) ease-in-out infinite;
   opacity: var(--opacity, 0.55);
 }
 
 @keyframes pearlDrift {
-  0%   { transform: translateY(0) translateX(0) scale(1); }
-  20%  { transform: translateY(-18px) translateX(6px) scale(1.02); }
-  45%  { transform: translateY(-8px) translateX(-4px) scale(0.98); }
-  70%  { transform: translateY(-22px) translateX(8px) scale(1.01); }
-  100% { transform: translateY(0) translateX(0) scale(1); }
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  20% {
+    transform: translateY(-18px) translateX(6px) scale(1.02);
+  }
+  45% {
+    transform: translateY(-8px) translateX(-4px) scale(0.98);
+  }
+  70% {
+    transform: translateY(-22px) translateX(8px) scale(1.01);
+  }
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
 }
-
