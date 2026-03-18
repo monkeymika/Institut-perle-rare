@@ -4,8 +4,6 @@
    Inspiration : Goldust Spa
    ============================================ */
 
-/* Fonts auto-hébergées */
-@import url("fonts.css");
 
 /* ===== VARIABLES ===== */
 :root {
@@ -780,10 +778,15 @@ section {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  will-change: transform;
+}
+
+.hero__bg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero__overlay {
@@ -893,9 +896,16 @@ section {
 .page-hero__bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
   animation: heroZoom 8s ease-out forwards;
+}
+
+.page-hero__bg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .page-hero__overlay {
@@ -2006,13 +2016,6 @@ textarea {
     grid-template-columns: 1fr 1fr;
   }
 
-  .hero__bg {
-    background-attachment: scroll;
-  }
-
-  .page-hero__bg {
-    background-attachment: scroll;
-  }
 }
 
 @media (max-width: 480px) {
