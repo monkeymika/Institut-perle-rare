@@ -238,6 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== FLOATING PEARLS + PARALLAX =====
   (function initPearls() {
+    if (window.innerWidth <= 1024) return;
     const pool = [
       [{ s:44, t:10, l: 3, dur:14, d:0,   o:0.60, spd:0.70 }, { s:20, t:62, l:91, dur:11, d:3,   o:0.50, spd:0.50 }, { s:28, t:80, l:18, dur:16, d:6,   o:0.44, spd:0.65 }, { s:14, t:35, l:55, dur: 9, d:2,   o:0.42, spd:0.40 }, { s:24, t:70, l:40, dur:13, d:8,   o:0.46, spd:0.55 }, { s:10, t:20, l:72, dur:10, d:1,   o:0.38, spd:0.80 }, { s:18, t:50, l:25, dur:12, d:5,   o:0.42, spd:0.45 }],
       [{ s:26, t:16, l:94, dur:13, d:2,   o:0.54, spd:0.60 }, { s:16, t:74, l: 7, dur:10, d:4,   o:0.46, spd:0.48 }, { s:36, t:44, l:82, dur:15, d:1,   o:0.50, spd:0.72 }, { s:12, t:25, l:35, dur: 8, d:5,   o:0.40, spd:0.42 }, { s:20, t:58, l:60, dur:12, d:0,   o:0.44, spd:0.58 }, { s:30, t: 5, l:50, dur:14, d:7,   o:0.48, spd:0.85 }, { s:10, t:88, l:20, dur: 9, d:3,   o:0.36, spd:0.38 }],
