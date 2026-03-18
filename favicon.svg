@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D0AA8E"/>
+      <stop offset="100%" stop-color="#9A7A5E"/>
+    </radialGradient>
+    <radialGradient id="pearl" cx="36%" cy="32%" r="58%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="18%" stop-color="#FAF5F0"/>
+      <stop offset="48%" stop-color="#D8BAA0"/>
+      <stop offset="75%" stop-color="#A87B5C"/>
+      <stop offset="100%" stop-color="#7A5438" stop-opacity="0.75"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="0.6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fond arrondi taupe -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+
+  <!-- Perle principale -->
+  <circle cx="16" cy="15.5" r="9.5" fill="url(#pearl)" filter="url(#glow)"/>
+
+  <!-- Reflet principal (lustre de perle) -->
+  <ellipse cx="13" cy="11.5" rx="3.2" ry="2" fill="white" fill-opacity="0.72" transform="rotate(-15 13 11.5)"/>
+
+  <!-- Petit reflet secondaire -->
+  <circle cx="11.5" cy="10" r="1" fill="white" fill-opacity="0.45"/>
+</svg>

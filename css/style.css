@@ -151,9 +151,9 @@ section {
   overflow: hidden;
 }
 
-.section--alt {
+/* .section--alt {
   background: var(--bg-alt);
-}
+} */
 
 /* Fondu doux entre sections blanches et sections crème */
 .section--alt::before,
@@ -1187,8 +1187,20 @@ section {
 .brands-carousel {
   overflow: hidden;
   position: relative;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
 }
 
 .brands-track {
@@ -1218,10 +1230,13 @@ section {
   border-radius: 10px;
 }
 
-
 @keyframes brandScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ===== VALUES ===== */
@@ -1306,7 +1321,7 @@ section {
 }
 
 .reviews-stars .star {
-  color: #F5A623;
+  color: #f5a623;
 }
 
 .reviews-score {
@@ -1347,13 +1362,15 @@ section {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .review-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .review-card__header {
@@ -1394,7 +1411,7 @@ section {
   display: flex;
   gap: 2px;
   font-size: 0.9rem;
-  color: #F5A623;
+  color: #f5a623;
 }
 
 .review-card__text {
