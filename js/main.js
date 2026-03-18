@@ -86,6 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
 
+  const mobileClose = document.querySelector('.mobile-menu__close');
+
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.contains('open');
@@ -96,10 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Fermer en cliquant en dehors du contenu
-    mobileMenu.addEventListener('click', (e) => {
-      if (e.target === mobileMenu) closeMobileMenu();
-    });
+    if (mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
   }
 
   function openMobileMenu() {
