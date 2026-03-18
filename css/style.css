@@ -1920,6 +1920,10 @@ textarea {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
+
+  .pearls-bg {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
