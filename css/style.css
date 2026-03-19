@@ -896,6 +896,9 @@ section {
 .page-hero__bg {
   position: absolute;
   inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   animation: heroZoom 8s ease-out forwards;
 }
 

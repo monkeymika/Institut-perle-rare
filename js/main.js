@@ -298,7 +298,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const section = wrap._section;
         const rect = section.getBoundingClientRect();
         // Skip si la section est bien au-delà du viewport
-        if (rect.bottom < -margin || rect.top > vh + margin) return;
+        if (rect.bottom < -margin || rect.top > vh + margin) {
+          wrap.style.top = '-200px';
+          return;
+        }
         const progress = 1 - (rect.top + rect.height) / (vh + rect.height);
         const parallaxOffset = progress * rect.height * wrap._spd;
         const top = rect.top + (wrap._t / 100) * rect.height - parallaxOffset;
