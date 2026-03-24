@@ -1978,6 +1978,7 @@ textarea {
   .split__img,
   .split__img-bg {
     aspect-ratio: 4/3;
+    object-position: top center;
   }
 
   .split__accent {

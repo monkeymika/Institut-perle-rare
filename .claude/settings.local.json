@@ -16,7 +16,17 @@
       "Bash(for f:*)",
       "Bash(do sed:*)",
       "Bash(done)",
-      "Bash(grep -l 'favicon' *.html)"
+      "Bash(grep -l 'favicon' *.html)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 -c \"from PIL import Image; print\\(''PIL ok''\\)\")",
+      "Bash(while read:*)",
+      "Bash(do basename:*)",
+      "Bash(grep -h \"src=\"\"./images/\" \"C:\\\\Users\\\\monke\\\\OneDrive\\\\Bureau\\\\Site_Claude_Code\\\\Perle_rare\"/*.html)",
+      "Bash(grep -h \"src=\"\"images/\" \"C:\\\\Users\\\\monke\\\\OneDrive\\\\Bureau\\\\Site_Claude_Code\\\\Perle_rare\"/*.html)",
+      "Bash(grep -h 'src=\"\"\"\"./images/' /c/Users/monke/OneDrive/Bureau/Site_Claude_Code/Perle_rare/*.html)",
+      "Bash(grep -h 'src=\"\"\"\"images/' /c/Users/monke/OneDrive/Bureau/Site_Claude_Code/Perle_rare/*.html)",
+      "Bash(grep -n 'fetchpriority=\"\"\"\"high\"\"\"\"' /c/Users/monke/OneDrive/Bureau/Site_Claude_Code/Perle_rare/*.html)",
+      "Bash(grep:*)"
     ]
   }
 }

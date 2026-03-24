@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1400&q=75&auto=format&fit=crop">
+  <link rel="preload" as="image" fetchpriority="high"
+    href="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1400&q=75&auto=format&fit=crop">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Institut Perle Rare By Laura — Soins esthétiques à Saint-Dizier</title>
   <meta name="description"
@@ -140,10 +141,12 @@
             <div class="nav__dropdown">
               <a href="soins-visage.html" class="nav__dropdown-link">Soins du Visage</a><a href="soins-corps.html"
                 class="nav__dropdown-link">Soins du Corps</a>
+              <a href="soins-amincissants.html" class="nav__dropdown-link">Soins Amincissants</a>
               <a href="beaute-mains-pieds.html" class="nav__dropdown-link">Beauté Mains &amp; Pieds</a>
               <a href="epilation.html" class="nav__dropdown-link">Épilation</a>
               <a href="maquillage.html" class="nav__dropdown-link">Maquillage</a>
-              <a href="soins-amincissants.html" class="nav__dropdown-link">Soins Amincissants</a>
+
+              <a href="bronzage.html" class="nav__dropdown-link">Bronzage</a>
             </div>
           </div>
           <div class="nav__item">
@@ -165,12 +168,16 @@
 
   <!-- Menu Mobile -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
-  <div class="mobile-menu__top">
-    <a href="index.html" class="logo-text mobile-menu__logo" style="text-decoration:none">Perle Rare<span>Institut By Laura</span></a>
-    <button class="mobile-menu__close" aria-label="Fermer le menu">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-    </button>
-  </div>
+    <div class="mobile-menu__top">
+      <a href="index.html" class="logo-text mobile-menu__logo" style="text-decoration:none">Perle Rare<span>Institut By
+          Laura</span></a>
+      <button class="mobile-menu__close" aria-label="Fermer le menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
     <nav>
       <a href="index.html" class="mobile-menu__link">Accueil</a>
       <a href="institut.html" class="mobile-menu__link">L'Institut</a>
@@ -178,10 +185,12 @@
       <div class="mobile-menu__sub" style="display:none">
         <a href="soins-visage.html" class="mobile-menu__sub-link">Soins du Visage</a><a href="soins-corps.html"
           class="mobile-menu__sub-link">Soins du Corps</a>
+        <a href="soins-amincissants.html" class="mobile-menu__sub-link">Soins Amincissants</a>
         <a href="beaute-mains-pieds.html" class="mobile-menu__sub-link">Beauté Mains &amp; Pieds</a>
         <a href="epilation.html" class="mobile-menu__sub-link">Épilation</a>
         <a href="maquillage.html" class="mobile-menu__sub-link">Maquillage</a>
-        <a href="soins-amincissants.html" class="mobile-menu__sub-link">Soins Amincissants</a>
+
+        <a href="bronzage.html" class="mobile-menu__sub-link">Bronzage</a>
       </div>
       <a href="contact.html" class="mobile-menu__link">Contact</a>
     </nav>
@@ -228,7 +237,8 @@
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero__bg">
-    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1400&q=75&auto=format&fit=crop" alt="" fetchpriority="high" decoding="sync">
+      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1400&q=75&auto=format&fit=crop" alt=""
+        fetchpriority="high" decoding="sync">
     </div>
     <!-- REMPLACEMENT : utilisez votre propre photo hero en remplaçant l'URL ci-dessus -->
     <div class="hero__overlay"></div>
@@ -261,7 +271,7 @@
             tête aux pieds. Laura prend le temps d'échanger sur les besoins de chaque cliente afin de proposer la
             solution la plus adaptée.</p>
           <p>Esthéticienne diplômée avec plus de 10 ans d'expérience, Laura vous propose des soins personnalisés avec
-            des marques de renom : Valmont, Maria Galland, Cinq Mondes, Esthederm et bien d'autres.</p>
+            des marques de renom : Valmont, Maria Galland, Cinq Mondes, Esthederm, LPG, Ericson, by Terry.</p>
           <a href="institut.html" class="btn btn--outline-dark">En savoir plus</a>
         </div>
         <div class="split__visual">
@@ -289,10 +299,10 @@
           <span class="stat__number">5★</span>
           <span class="stat__label">Avis clients</span>
         </div> -->
-        <div data-reveal data-reveal-delay="4">
+        <!-- <div data-reveal data-reveal-delay="4">
           <span class="stat__number">7</span>
           <span class="stat__label">Prestations</span>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -341,7 +351,7 @@
           </div>
           <div class="card__body">
             <h3>Beauté Mains &amp; Pieds</h3>
-            <p>Manucure, bain de paraffine, soin sublimes, Calluspeeling… des soins complets pour des mains et des pieds
+            <p>Manucure, soin sublimes, Calluspeeling… des soins complets pour des mains et des pieds
               parfaits.</p>
             <a href="beaute-mains-pieds.html" class="btn btn--outline-dark">Découvrir</a>
           </div>
@@ -349,12 +359,15 @@
 
         <article class="card" data-reveal data-reveal-delay="4">
           <div class="card__img">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&auto=format&fit=crop"
-              alt="Épilation" loading="lazy">
+            <picture>
+              <source srcset="./images/optimisees/epilation.webp" type="image/webp">
+              <img src="./images/optimisees/epilation.jpg" alt="Épilation — Institut Perle Rare by Laura" loading="lazy">
+            </picture>
           </div>
           <div class="card__body">
             <h3>Épilation</h3>
-            <p>Épilation à la cire jetable ou longue durée, pour toutes les zones et tous les types de peaux.</p>
+            <p>Épilation définitive par thermolyse — Technologie Apilus. Un traitement 100% définitif pour une peau
+              durablement lisse.</p>
             <a href="epilation.html" class="btn btn--outline-dark">Découvrir</a>
           </div>
         </article>
@@ -373,8 +386,10 @@
 
         <article class="card" data-reveal data-reveal-delay="6">
           <div class="card__img">
-            <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&q=80&auto=format&fit=crop"
-              alt="Soins amincissants" loading="lazy">
+            <picture>
+              <source srcset="./images/optimisees/soinsAmincissant.webp" type="image/webp">
+              <img src="./images/optimisees/soinsAmincissant.jpg" alt="Soins amincissants — Institut Perle Rare by Laura" loading="lazy">
+            </picture>
           </div>
           <div class="card__body">
             <h3>Soins Amincissants</h3>
@@ -428,7 +443,7 @@
   </section>
 
   <!-- ===== VIDÉOS ===== -->
-  <section>
+  <!-- <section>
     <div class="container">
       <div class="section-header" data-reveal>
         <span class="eyebrow">Découvrez l'Institut</span>
@@ -452,10 +467,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ===== CARTE CADEAU ===== -->
-  <section class="gift-section section--alt">
+  <!-- <section class="gift-section section--alt">
     <div class="container">
       <div class="split split--reverse" data-reveal>
         <div class="split__content">
@@ -490,7 +505,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ===== TÉMOIGNAGES ===== -->
   <section class="section--alt">
